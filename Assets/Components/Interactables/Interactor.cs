@@ -12,6 +12,7 @@ public class Interactor : MonoBehaviour
 
     [Header("Setup")]
     [SerializeField] private float _radiusRange = 0.5f;
+    public float RadiusRange { get => _radiusRange; }
 
     private IEnumerator _cheakBreakDistanceCorroutine;
 
