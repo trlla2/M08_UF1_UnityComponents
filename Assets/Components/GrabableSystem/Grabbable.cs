@@ -27,6 +27,8 @@ public class Grabbable : MonoBehaviour
     [SerializeField] private GrabMode _grabMode = GrabMode.FollowParentTeleport;
     [SerializeField, Min(0)] private float _smoothTime = 0.25f;
     [SerializeField] public GrabbableType grabbableType = GrabbableType.Consumible;
+    [SerializeField] public List<ObjectType> objectTypes = new();
+
 
     [Header("Events")]
     public UnityEvent<GameObject, GameObject> OnStartGrab;
@@ -55,7 +57,7 @@ public class Grabbable : MonoBehaviour
     }
     private void StartGrab(GameObject parent)
     {
-        _isGrabbed = false;
+        _isGrabbed = true;
 
         if(_followCorroutine != null)
         {
