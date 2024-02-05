@@ -74,6 +74,4 @@ public class DropPlace : MonoBehaviour
 
         OnObjectGrabbed.Invoke(grabbable.gameObject);
     }
-
-    
 }
